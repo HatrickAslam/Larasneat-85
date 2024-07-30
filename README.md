@@ -8,7 +8,7 @@
 </p>
 
 # About Larasneat-85
-Based on Laravel 8, Sneat 1.0.0 , PHP 7.4 and Bootstrap 5.
+Based on Laravel 8, Sneat 1.0.0 , PHP 7.4 and Bootstrap 5. Built with datatables and select2.
 Make your development easier with Larasneat-85.
 
 # Template Source

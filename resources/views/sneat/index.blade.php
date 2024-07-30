@@ -39,8 +39,10 @@
 
         <!-- Vendors CSS -->
         <link rel="stylesheet" href="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
-
         <link rel="stylesheet" href="{{asset('assets/vendor/libs/apex-charts/apex-charts.css')}}" />
+        <link rel="stylesheet" href="{{asset('assets/vendor/css/select2.min.css')}}"/>
+        <link rel="stylesheet" href="{{asset('assets/vendor/css/select2-bootstrap-5-theme.min.css')}}"/>
+        <link rel="stylesheet" href="{{asset('assets/vendor/css/dataTables.css')}}"/>
 
         <!-- Page CSS -->
 
@@ -441,7 +443,7 @@
                 <!-- Navbar -->
 
                 <nav
-                    class="layout-navbar container-fluid navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+                    class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
                     id="layout-navbar"
                 >
                     <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
@@ -536,7 +538,7 @@
                 <div class="content-wrapper">
                     <!-- Content -->
 
-                    <div class="container-fluid flex-grow-1 container-p-y">
+                    <div class="container-xxl flex-grow-1 container-p-y">
                         @yield('konten')
                     </div>
                     <!-- / Content -->
@@ -613,8 +615,20 @@
     <script src="{{asset('assets/js/ui-popover.js')}}"></script>
     <script src="{{asset('assets/js/extended-ui-perfect-scrollbar.js')}}"></script>
     <script src="{{asset('assets/js/form-basic-inputs.js')}}"></script>
+    <script src="{{asset('assets/vendor/js/select2.min.js')}}"></script>
+    <script src="{{asset('assets/vendor/js/dataTables.js')}}"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.select-2').select2({
+                theme: 'bootstrap-5'
+            });
+        });
+
+        let table = new DataTable('.data-tables');
+    </script>
 </body>
 </html>
